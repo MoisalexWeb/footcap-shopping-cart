@@ -1,0 +1,36 @@
+{
+    "newEditionShoes": [
+        {
+            "id": 1,
+            "name": "Running Sneakers Shoes",
+            "price": 195.85,
+            "image": "/images/new-edition-1.png",
+            "brand": "nike",
+            "category": "men / women"
+        },
+        {
+            "id": 2,
+            "name": "Leather Mens Slipper",
+            "price": 199.99,
+            "image": "/images/new-edition-2.png",
+            "brand": "nike",
+            "category": "men / sports"
+        },
+        {
+            "id": 3,
+            "name": "Simple Fabric Shoe",
+            "price": 195.99,
+            "image": "/images/new-edition-3.png",
+            "brand": "nike",
+            "category": "men / women"
+        },
+        {
+            "id": 4,
+            "name": "Air Jordan 7 Retro",
+            "price": 210.85,
+            "image": "/images/new-edition-4.png",
+            "brand": "adidas",
+            "category": "men / sports"
+        }
+    ]
+}

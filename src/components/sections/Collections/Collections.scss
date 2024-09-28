@@ -1,0 +1,13 @@
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 30px;
+
+    @media screen and (max-width: 1050px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
+    }
+}

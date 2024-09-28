@@ -1,0 +1,54 @@
+@use "../../../assets/colors" as c;
+
+.post {
+    padding-top: 50px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    scroll-snap-type: inline mandatory;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 20px;
+        outline: 2px solid c.$bittersweet;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: c.$bittersweet;
+        border: 2px solid #fff;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-button {
+        width: calc(40% - 40px);
+    }
+
+    @media screen and (min-width: 1800px) {
+        max-width: 1200px;
+    }
+
+    @media screen and (max-width: 1140px) {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 550px) {
+        &::-webkit-scrollbar-button {
+            width: calc(30% - 10px);
+        }
+
+        &::-webkit-scrollbar {
+            height: 12px;
+        }
+    }
+
+    &__ul {
+        display: flex;
+    }
+}

@@ -1,0 +1,20 @@
+@use "../../../assets/_colors" as c;
+
+.products-title {
+    color: c.$black;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    margin-top: 30px;
+}

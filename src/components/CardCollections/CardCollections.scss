@@ -1,0 +1,49 @@
+@use "../../assets/colors" as c;
+
+.cardCollections {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 20px;
+    padding: 20px;
+
+    &-title {
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: c.$black;
+        font-weight: 700;
+    }
+
+    &-img {
+        width: 70%;
+    }
+
+    &-cta {
+        background: none;
+        color: c.$black;
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 5px;
+        padding: 10px 25px;
+        border: 2px solid;
+        text-transform: capitalize;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: rgba(0,0,0,0.1);
+        }
+
+        i {
+            font-size: 25px;
+        }
+    }
+}

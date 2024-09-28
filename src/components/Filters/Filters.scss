@@ -1,0 +1,26 @@
+@use "../../assets/colors" as c;
+
+.filters {
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-btn {
+        display: inline-block;
+        text-transform: capitalize;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid hsl(0, 0%, 88%);
+        font-size: 15px;
+        color: c.$gray;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    &-btn.active-btn {
+        background-color: c.$bittersweet;
+        border-color: currentColor;
+        color: #fff;
+    }
+}

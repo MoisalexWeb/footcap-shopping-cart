@@ -1,0 +1,202 @@
+@use "../../../assets/colors" as c;
+
+.footer {
+    background-color: c.$footer-bg;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        &-logo {
+            width: 150px;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            grid-gap: 10px;
+
+            &-link {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-color: hsl(0, 0%, 88%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 25px;
+                color: c.$gray;
+                transition: background-color 0.3s;
+
+                i {
+                    transition: color 0.3s;
+                }
+
+                &:hover {
+                    background-color: c.$bittersweet;
+                }
+
+                &:hover > i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        grid-gap: 20px;
+
+        &__item {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            height: max-content;
+            font-size: 15px;
+
+            &-title {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 22px;
+                font-weight: 700;
+                text-transform: capitalize;
+                color: c.$dark-blue;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 20%;
+                    height: 2px;
+                    background-color: c.$bittersweet;
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                }
+            }
+
+            &__link {
+                display: flex;
+                align-items: center;
+                grid-gap: 10px;
+                font-style: normal;
+                color: c.$gray;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: c.$bittersweet;
+                }
+
+                i {
+                    font-size: 25px;
+                    color: c.$bittersweet;
+                }
+            }
+
+            &__ul {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 10px;
+
+                &-link {
+                    display: flex;
+                    align-items: center;
+                    text-transform: capitalize;
+                    grid-gap: 5px;
+                    color: c.$gray;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: c.$bittersweet;
+                    }
+
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            &__hours {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 10px;
+
+                strong {
+                    color: c.$dark-blue;
+                }
+            }
+
+            &__form {
+                display: flex;
+                height: 50px;
+
+                &-input {
+                    flex: 1;
+                    background-color: #fff;
+                    border: none;
+                    outline: none;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    color: inherit
+                }
+
+                &-submit {
+                    display: inline-block;
+                    height: 100%;
+                    text-transform: capitalize;
+                    border: none;
+                    outline: none;
+                    background-color: c.$bittersweet;
+                    padding: 0 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+
+                    &:hover {
+                        background-color: hsla(5, 100%, 69%, 0.861);
+                    }
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        background-color: c.$dark-blue;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        letter-spacing: 1px;
+
+        a {
+            color: c.$bittersweet;
+            font-weight: 500;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer__header {
+        flex-direction: column;
+        align-items: start;
+        grid-gap: 20px;
+    }
+}

@@ -1,0 +1,116 @@
+@use "../../assets/colors" as c;
+
+.shoeCard {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 auto;
+
+    &__figure {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover > &__ul {
+            transform: translateX(0);
+        }
+
+        &__ul {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            grid-gap: 10px;
+            z-index: 20;
+            transform: translateX(125%);
+            transition: transform 0.2s;
+
+            &__btn {
+                position: relative;
+
+                &-span {
+                    position: absolute;
+                    right: 45px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: max-content;
+                    display: inline-block;
+                    background-color: c.$black;
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s;
+                }
+
+                &:hover > &-span {
+                    opacity: 1;
+                }
+
+                i {
+                    font-size: 20px;
+                    display: inline-block;
+                    background-color: #fff;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    cursor: pointer;
+                    color: c.$gray;
+                    transition: all 0.3s;
+                    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+                }
+
+                &:hover > i {
+                    background-color: c.$bittersweet;
+                    color: #fff;
+                }
+
+            }
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        &:hover > &-img {
+            transform: scale(1.06);
+        }
+    }
+
+    &__texts {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        text-align: center;
+
+        &-title {
+            color: c.$black;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+        }
+
+        &-price {
+            font-weight: 600;
+            color: c.$bittersweet;
+        }
+
+        &-category {
+            text-transform: capitalize;
+        }
+    }
+}
