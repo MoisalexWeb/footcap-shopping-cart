@@ -2,6 +2,9 @@ import "./ShoeCard.scss"
 
 
 export const ShoeCard = ({ image, name, category, price, addToCart, background, heightImage }) => {
+    // Poner esta linea para la URL de la imagen en el deploy
+    const BASE_URL = "https://moisalexweb.github.io/footcap-shopping-cart"
+
     return (
         <div
             className="shoeCard"
@@ -9,7 +12,7 @@ export const ShoeCard = ({ image, name, category, price, addToCart, background, 
         >
             <figure className="shoeCard__figure">
                 <img
-                    src={image}
+                    src={`${BASE_URL}/${image}`}
                     alt={name}
                     className="shoeCard__figure-img"
                     style={{'height': `${(heightImage) ? heightImage : ''}`}}
