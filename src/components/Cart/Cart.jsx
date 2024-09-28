@@ -5,6 +5,8 @@ import { useCartContext } from "../../hooks/useCartContext"
 
 export const Cart = () => {
     const { cart, showCart, addToCart, clearCart, decreaseQuantity, totalPrice, setShowCart } = useCartContext()
+    // Poner esta linea para la URL de la imagen en el deploy
+    const BASE_URL = "https://moisalexweb.github.io/footcap-shopping-cart"
 
     if (showCart) {
         return (
@@ -16,7 +18,7 @@ export const Cart = () => {
                                 {cart.map(item => {
                                     return (
                                         <li className="cart__item" key={item.id}>
-                                            <img src={item.image} alt={item.name} className="cart__item-img" />
+                                            <img src={`${BASE_URL}${item.image}`} alt={item.name} className="cart__item-img" />
                                             <p className="cart__item-name">{item.name}</p>
                                             <p className="cart__item-price">Total price: <span>{(item.price * item.quantity).toFixed(2)}$</span></p>
 
